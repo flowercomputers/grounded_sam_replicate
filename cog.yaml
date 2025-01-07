@@ -18,5 +18,6 @@ build:
     - "opencv-python==4.7.0.72"
     - "addict==2.4.0"
     - "yapf==0.40.0"
+    - "numpy==1.26.1"
 
 predict: "predict.py:Predictor"
