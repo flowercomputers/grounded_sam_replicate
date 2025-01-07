@@ -61,10 +61,6 @@ class Predictor(BasePredictor):
                 description="Positive mask prompt",
                 default="clothes,shoes",
             ),
-            negative_mask_prompt: str = Input(
-                description="Negative mask prompt",
-                default="pants",
-            ),
             adjustment_factor: int = Input(
                 description="Mask Adjustment Factor (-ve for erosion, +ve for dilation)",
                 default=0,
@@ -77,7 +73,6 @@ class Predictor(BasePredictor):
 
         annotated_picture_mask, neg_annotated_picture_mask, mask, inverted_mask = run_grounding_sam(image,
                                                                                                     mask_prompt,
-                                                                                                    negative_mask_prompt,
                                                                                                     self.groundingdino_model,
                                                                                                     self.sam_predictor,
                                                                                                     adjustment_factor)

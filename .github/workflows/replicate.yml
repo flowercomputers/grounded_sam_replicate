@@ -23,8 +23,8 @@ jobs:
       #to save disk space due to large image size
       - name: Free disk space
         run: |
-           chmod +x ./script/free_disk_space.sh
-           ./script/free_disk_space.sh
+          chmod +x ./script/free_disk_space.sh
+          ./script/free_disk_space.sh
         shell: bash
       - name: Install Cog
         run: |
@@ -41,4 +41,4 @@ jobs:
           cog run script/download_weights.py
       - name: Push to Replicate
         run: |
-          cog push r8.im/schananas/grounded_sam
+          cog push r8.im/flowercomputers/prompt-segmenter
